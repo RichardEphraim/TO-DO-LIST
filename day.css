@@ -1,14 +1,12 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #161722;
+    background-color: rgb(228, 218, 218);
 }
 
 .list-body{
     padding: 1px;
     background-image: url(todo.jpg);
-    background-color:rgb(171, 132, 84);
-    background-blend-mode:overlay;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,13 +30,17 @@ input{
     height: 50px;
     margin: 10px 10px;
     padding: 2px;
-    background-color:#161722;
+    background-color:whitesmoke;
     border-radius: 5px;
     font-size: 17px;
     font-family: Georgia;
     outline: none;
-   color: white;
+   color: black;
 }
+.input::placeholder{
+    color: wheat;
+}
+
 .letter{
     display: flex;
     position:relative;
@@ -56,7 +58,7 @@ input{
 }
 
 .theme{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 20px;
 }
