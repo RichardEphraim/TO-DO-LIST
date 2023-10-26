@@ -7,6 +7,8 @@ body{
 .list-body{
     padding: 1px;
     background-image: url(todo.jpg);
+    background-color:rgb(171, 132, 84);
+    background-blend-mode:overlay;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -61,4 +63,7 @@ input{
     width: 40px;
     height: 40px;
     margin: 20px;
+}
+#night{
+    display: none;
 }
