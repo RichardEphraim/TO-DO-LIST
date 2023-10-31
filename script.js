@@ -18,14 +18,32 @@ let currentCssFile = "style.css";
 
 
 button.addEventListener("click", () => {
-this.classList.button('theme1')
 
-//   if (currentCssFile === "style.css") {
-//     cssLink.href = "day.css";
-//     currentCssFile = "day.css";
-//   } 
-//   else {
-//     cssLink.href = "style.css";
-//     currentCssFile = "style.css";
-//   }
+  if (currentCssFile === "style.css") {
+    cssLink.href = "day.css";
+    currentCssFile = "day.css";
+  } 
+  else {
+    cssLink.href = "style.css";
+    currentCssFile = "style.css";
+  }
+})
+
+
+const cssLink1 = document.querySelector("link[rel='stylesheet']");
+const button1 = document.querySelector("#day");
+
+let currentCssFile1 = "style.css";
+
+
+button1.addEventListener("click", () => {
+
+  if (currentCssFile1 === "style.css") {
+    cssLink.href = "day.css";
+    currentCssFile1 = "day.css";
+  } 
+  else {
+    cssLink.href = "style.css";
+    currentCssFile = "style.css";
+  }
 })

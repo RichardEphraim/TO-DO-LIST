@@ -63,3 +63,21 @@ input{
 #day{
     display: none;
 }
+
+input[type="radio"] {
+    border: 1px solid white;
+    margin: 0;
+    padding: 0;
+  }
+  .task{
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    margin: 10px;
+  }
+  .functions{
+    border: 2px solid white;
+    display: flex;
+  
+  }
