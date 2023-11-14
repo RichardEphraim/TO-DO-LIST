@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #161722;
+    box-sizing: border-box;
 }
 
 .list-body{
@@ -58,6 +59,29 @@ select{
 #day{
     display: none;
 }
-
-
-
+#tasks{
+ padding-inline: 10px;
+ width: 50%;
+ height: 50px ;
+ display: flex;
+ align-items: center;
+ color: white;
+ margin: 10px;
+justify-content: space-between;
+background-color: #161722;
+box-shadow: 2px 2px 20px black;
+cursor: pointer;
+}
+#tasks input{
+    width: 15px;
+}
+.inputs{
+    display: flex;
+    align-items: center;
+}
+.strike {
+    text-decoration:line-through;
+  }
+  label{
+    font-size: 20px;
+  }
