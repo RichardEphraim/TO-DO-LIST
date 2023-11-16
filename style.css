@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-color: #161722;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .list-body{
@@ -81,6 +82,7 @@ cursor: pointer;
 }
 .strike {
     text-decoration:line-through;
+    color: rgb(146, 143, 143);
   }
   label{
     font-size: 20px;
