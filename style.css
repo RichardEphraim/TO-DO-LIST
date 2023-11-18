@@ -87,3 +87,43 @@ cursor: pointer;
   label{
     font-size: 20px;
   }
+
+  .grid{
+   display:flex;
+   justify-content: space-between;
+   margin: 10px;
+  }
+  .stats{
+    color: white;
+      animation: float 10s infinite ease-in-out;
+    margin-inline: 10px;
+    cursor: not-allowed;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+  .stats li{
+    background-color: #161722;
+    box-shadow: 1px 1px 20px black;
+    margin-block: 25px;
+    list-style-type: none;
+   width: 150px;
+   padding: 10px;
+  }
+
+  .count{
+    margin-inline: 5px;
+    background-color: #bb742f;
+    float: right;
+    padding: 10px;
+ 
+  }
