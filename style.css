@@ -62,23 +62,26 @@ select{
 }
 #tasks{
  padding-inline: 10px;
- width: 50%;
- height: 50px ;
+ width: 90%;
+ height: 55px ;
  display: flex;
  align-items: center;
  color: white;
- margin: 10px;
+ margin: 25px 10px;
 justify-content: space-between;
 background-color: #161722;
 box-shadow: 2px 2px 20px black;
 cursor: pointer;
 }
 #tasks input{
-    width: 15px;
+    width: 18px;
+
 }
 .inputs{
     display: flex;
     align-items: center;
+    gap: 0.70rem  ;
+    padding-inline: 10px;
 }
 .strike {
     text-decoration:line-through;
@@ -97,7 +100,7 @@ cursor: pointer;
     color: white;
       animation: float 10s infinite ease-in-out;
     margin-inline: 10px;
-    cursor: not-allowed;
+
   }
   @keyframes float {
     0% {
@@ -113,7 +116,7 @@ cursor: pointer;
 
   .stats li{
     background-color: #161722;
-    box-shadow: 1px 1px 20px black;
+    box-shadow: 1px 1px 10px black;
     margin-block: 25px;
     list-style-type: none;
    width: 150px;
@@ -126,4 +129,8 @@ cursor: pointer;
     float: right;
     padding: 10px;
  
+  }
+  .slash{
+    text-decoration: line-through;
+    color: gray;
   }
