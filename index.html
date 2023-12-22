@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO LIST</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,50 +18,38 @@
 
         <div class="content"> 
 
-            <div >
+            <div class="todoform">
                 <input type="text" id="new" placeholder="Create New List Bro">
-                <button class="button">submit</button>
+                <button class="button">+</button>
+
              </div>
        </div>  
     </div>
     <div class="grid">
-        <div class="wrap">
-             <div id="tasks">
-                 <div class="inputs">
-                    <input type="checkbox" id="todo">
-                     <label class="slas" for="" contenteditable="true"> going to work tomorrow </label>
-                </div>
-                 <div>
-                    <button class="remove-btn"><i class="fa-solid fa-trash">X</i></button>
-                </div>
-            </div>  
-            
-            <div  id="tasks">
-                <div class="inputs">
-                   <input type="checkbox" id="todo">
-                    <label class="slash" for="" contenteditable> going  and the fox can ump to work tomorrow </label>
-               </div>
-                <div>
-                   <button class="remove-btn"><i class="fa-solid fa-trash">X</i></button>
-               </div>
-           </div> 
-     </div >
+       
         <div class="stats">
             <ul>
                 <li>
                      <span> Completed</span>
-                      <span class="count1">0</span>
+                      <span id="count1" class="count">0</span>
                     </li>
                 <li>
                      <span> Total</span> 
-                     <span class="count2">0</span>
+                     <span id="count2" class="count">0 </span>
                     </li>
                 <li>
                      <span> Remaining</span>
-                     <span class="count3">0</span>
+                     <span id="count3" class="count">0</span>
                     </li>
             </ul>
         </div>
+        
+         <div class="wrap">
+          
+            
+         
+     </div >
+     
     </div>
 
     
@@ -70,3 +57,4 @@
 <script src="functions.js"></script>
 </body>
 </html>
+
