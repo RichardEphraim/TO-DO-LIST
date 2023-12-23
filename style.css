@@ -72,8 +72,10 @@ select{
 .nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: 'Cinzel Decorative', serif;
-  
+   height: 40px;
+  margin: 10px;
 }
 
 
