@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO LIST</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="themeStylesheet" rel="stylesheet" href="day.css">
 </head>
 
 <body>
@@ -12,8 +12,8 @@
 
         <div class="nav">
              <h1>TO-DO LIST</h1>
-            <img src="night.png" alt="" class="theme" id="night">
-            <img src="day.png" alt="" class="theme" id="day">
+             <img src="night.png" alt="" id="night" class="theme-toggle" onclick="toggleTheme()">
+             <img src="day.png" alt="" id="day" class="theme-toggle" onclick="toggleTheme()">
         </div>
 
         <div class="content"> 

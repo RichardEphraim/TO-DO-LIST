@@ -76,6 +76,7 @@ select{
   padding: 10px;
 }
 
+
 .theme{
   width: 30px;
   height: 30px;
@@ -84,6 +85,11 @@ select{
 #day{
   display: none;
 }
+#night{
+  width: 2rem;
+  height: 2rem;
+  }
+
 #tasks{
 padding-inline: 10px;
 width: 60vw;

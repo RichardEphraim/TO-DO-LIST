@@ -1,72 +1,337 @@
-/* *{
-    transition:  0.5s ease-in-out;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Open+Sans:wght@800&family=Poppins:wght@900&family=Rubik+Doodle+Shadow&display=swap');
 body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(228, 218, 218);
+  margin: 0;
+  padding: 0;
+  background-color: #dedcdc;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .list-body{
-    padding: 1px;
-    background-image: url(todo.jpg);
-    background-color:rgb(171, 132, 84);
-    background-blend-mode:overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 99.80vw;
-    height: 250px;
-    position: relative;
+  padding: 1px;
+  background-image: url(todo.jpg);
+  /* background-color:#f2f2f200; */
+  /* background-blend-mode:overlay; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 99.80vw;
+  height: 250px;
+  top: 0;
+  position: sticky;
+  z-index: 30;
 }
 
 .content{
-   position: absolute;
-   bottom: 0;
-   margin-left: auto;
-   margin-left: auto;
-   display: flex;
-   justify-content: space-between;
-   width: 99%;
-}
-input{
-    border: none;
-    width: 500px;
-    height: 50px;
-    margin: 10px 10px;
-    padding: 2px;
-    background-color:whitesmoke;
-    border-radius: 5px;
-    font-size: 17px;
-    font-family: Georgia;
-    outline: none;
-   color: black;
-}
-.input::placeholder{
-    color: wheat;
+ position: absolute;
+ bottom: 0;
+ margin-left: auto;
+ margin-left: auto;
+ display: flex;
+ justify-content: space-between;
+ width: 99%;
 }
 
-.letter{
-    display: flex;
-    position:relative;
-    bottom: 0;
+.todoform{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding: 10px;
 }
-.letter p{
-    margin-left:  10px;
-    margin-right: 10px;
-    font-size: 18px;
-    font-weight: bold;
+input{
+  border: none;
+  width: 50vw;
+  height: 50px;
+  margin-right: 20px;
+  padding: 5px;
+  background-color:#dedcdc;
+  border-radius: 5px;
+  font-size: 17px;
+  font-family: Georgia;
+  outline: none;
+ color: #161722;
 }
+.button{
+  color: #161722;
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  font-size: 25px;
+  border: 5px solid #161722;
+  background-color: transparent;
+   
+  
+}
+select{
+  padding: 8px; 
+   background-color:#161722;
+   color: white;
+}
+
 .nav{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Cinzel Decorative', serif;
+  padding: 10px;
 }
 
 .theme{
-    width: 40px;
-    height: 40px;
-    margin: 20px;
+  width: 30px;
+  height: 30px;
+  margin: 20px;
 }
 #night{
-    display: none;
+  display: none;
+}
+#day{
+width: 2.5rem;
+height: 2.5rem;
+}
+
+#tasks{
+padding-inline: 10px;
+width: 60vw;
+height: 55px ;
+display: flex;
+align-items: center;
+color:#161722;
+margin: 25px 10px;
+justify-content: space-between;
+background-color: #dedcdc;
+box-shadow: 2px 2px 5px black;
+cursor: pointer;
+border-radius: 0px 20px 0px 20px;
+
+}
+
+#tasks input {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: transparent;
+  display: grid;
+  place-content: center;
+  border: 3px solid #bb742f;
+  border-radius: 50%;
+}
+#tasks input::before{
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='13' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E");
+  transform: scale(0);
+}
+
+#tasks input:checked{
+  background-color: #bb742f;
+  border-color: #bb742f;
+}
+
+#tasks input:checked::before{
+  transform: scale(1);
+}
+
+
+.inputs{
+  display: flex;
+  align-items: center;
+  gap: 0.70rem  ;
+  padding-inline: 10px;
+}
+.slash {
+  color: rgb(146, 143, 143, 0.5);
+  transition: 1.2s;
+
+}
+label{
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Cambria';
+}
+
+.grid{
+ display:flex;
+ justify-content: space-between;
+ margin: 10px;
+ 
+}
+.stats{
+  color: #161722;
+    animation: float 10s infinite ease-in-out;
+  margin-inline: 10px;
+  position: fixed;
+  right: 0;
+  font-family: Georgia;
+  
+}
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.stats li{
+  background-color: #dedcdc;
+  box-shadow: 1px 1px 10px black;
+  margin-block: 25px;
+  list-style-type: none;
+ width: 150px;
+ padding: 10px;
+}
+
+.count{
+  margin-inline: 5px;
+  background-color: #bb742f;
+  float: right;
+  padding: 10px;
+  color: black;
+  z-index: 100;
+
+}
+
+
+.remove-btn{
+  color: #bb742f;
+  background-color: transparent;
+  border: none;
+  margin-inline: 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 900px){
+
+input{
+  
+  width: 270px;
+  height: 35px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.grid{
+  
+ display:block;
+ margin: 10px 
+}
+
+   
+.stats{ 
+  animation:none;
+  position: fixed;
+  left: -20px;
+  top: 198px;
+  padding: none;
+  margin: none;
+  z-index: 100;
+}
+
+.stats li{
+  margin:3px;
+ width: 90px;
+ padding: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+
+.stats ul{
+    display: flex;
+    font-size: 10px;
+}
+
+  .count{
+  margin-inline: 2px;
+  background-color: #bb742f;
+  float: right;
+  padding: 5px;
+  color: black;
+  z-index: 100;
+}
+
+
+
+
+
+#tasks{
+padding-inline: 0px;
+width: 85vw;
+height: 35px ;
+display: flex;
+align-items: center;
+
+margin: 15px 2px;
+justify-content: space-between;
+color:#161722;
+background-color: #dedcdc;
+box-shadow: 2px 2px 20px black;
+border-radius: 0px 10px 0px 10px;
+}
+
+#tasks input {
+  appearance: none;
+  width: 0.90rem;
+  height: 0.90rem;
+  background-color: transparent;
+  display: grid;
+  place-content: center;
+  border: 2px solid #bb742f;
+  border-radius: 50%;
+}
+#tasks input::before{
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15' width='12' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E");
+  transform: scale(0);
+}
+
+#tasks input:checked{
+  background-color: #bb742f;
+  border-color: #bb742f;
+}
+
+#tasks input:checked::before{
+  transform: scale(1);
+}
+
+
+.inputs{
+  display: flex;
+  align-items: center;
+  gap: 0.0rem  ;
+  padding-inline: 0px;
+}
+
+label{
+  font-size: 14px;
+}
+
+
+.remove-btn{
+
+}
+.wrap{
+  position: relative;
+  top: 50px;
+}
+
+
+.list-body{
+  height: 200px;
+}
 }

@@ -5,8 +5,21 @@ const completedTask = document.querySelector("#count1");
 const totalTask = document.querySelector("#count2");
 const remainingTask = document.querySelector("#count3");
 const wrap = document.querySelector(".wrap");
+const themeStylesheet = document.getElementById('themeStylesheet');
+let isDarkMode = false;
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+function toggleTheme() {
+  isDarkMode = !isDarkMode;
+  applyTheme();
+}
+
+function applyTheme() {
+  const newTheme = isDarkMode ? 'style.css' : 'day.css';
+  themeStylesheet.setAttribute('href', newTheme);
+  
+}
 
 submitInput.addEventListener('click', (e) => {
   e.preventDefault();
@@ -98,3 +111,4 @@ function countTasks() {
   completedTask.textContent = completedTaskArray.length;
   remainingTask.textContent = tasks.length - completedTaskArray.length;
 }
+
