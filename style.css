@@ -218,7 +218,7 @@ label{
 
 /* RESPONSIVENESS */
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 900px){
 
 input{
   
@@ -327,15 +327,6 @@ label{
 .remove-btn{
 
 }
-.button{
-  color: #161722;
-  height: 30px;
-  width: 30px;
-
- 
-  font-size: 15px;
- 
-}
 .wrap{
   position: relative;
   top: 50px;
@@ -344,6 +335,5 @@ label{
 
 .list-body{
   height: 200px;
-  width: 90vw;
 }
 }
