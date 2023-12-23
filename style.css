@@ -39,7 +39,7 @@ body{
 }
 input{
   border: none;
-  width: 500px;
+  width: 50vw;
   height: 50px;
   margin-right: 20px;
   padding: 5px;
@@ -54,11 +54,12 @@ input{
   color: #161722;
   height: 40px;
   width: 40px;
-  font-family: Georgia;
+
   border-radius: 50%;
   font-size: 25px;
   border: 5px solid #161722;
   background-color: transparent;
+   
   
 }
 select{
@@ -82,7 +83,7 @@ select{
 }
 #tasks{
 padding-inline: 10px;
-width: 700px;
+width: 60vw;
 height: 55px ;
 display: flex;
 align-items: center;
@@ -92,8 +93,33 @@ justify-content: space-between;
 background-color: #161722;
 box-shadow: 2px 2px 20px black;
 cursor: pointer;
+border-radius: 0px 20px 0px 20px;
+
 }
 
+#tasks input {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  display: grid;
+  place-content: center;
+  border: 3px solid #bb742f;
+  border-radius: 50%;
+}
+#tasks input::before{
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='13' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E");
+  transform: scale(0);
+}
+
+#tasks input:checked{
+  background-color: #bb742f;
+  border-color: #bb742f;
+}
+
+#tasks input:checked::before{
+  transform: scale(1);
+}
 
 
 .inputs{
@@ -110,6 +136,7 @@ cursor: pointer;
 label{
   font-size: 20px;
   text-decoration: none;
+  font-family: 'Cambria';
 }
 
 .grid{
@@ -180,7 +207,7 @@ label{
 
 /* RESPONSIVENESS */
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 900px){
 
 input{
   
@@ -197,12 +224,11 @@ input{
 }
 
    
-.stats{
-   
+.stats{ 
   animation:none;
   position: fixed;
-  left: -20px;
-  top: 200;
+  left: -10px;
+  top: 198px;
   padding: none;
   margin: none;
   z-index: 100;
@@ -238,7 +264,7 @@ input{
 
 #tasks{
 padding-inline: 0px;
-width: 90vw;
+width: 85vw;
 height: 35px ;
 display: flex;
 align-items: center;
@@ -292,11 +318,12 @@ label{
 }
 .wrap{
   position: relative;
-  top: 60;
+  top: 50px;
 }
 
 
 .list-body{
   height: 200px;
+  width: 95vw;
 }
 }

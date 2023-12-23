@@ -48,7 +48,7 @@ function createTask(task) {
   const taskElMarkup = `
     <div id="tasks">
       <div class="inputs ${task.isCompleted ? 'slash' : ''}"> <input type="checkbox" class="radioinput" id="${task.id}" ${task.isCompleted ? 'checked' : ''}>
-        <label for="${task.id}" ${task.isCompleted ? '' : 'contenteditable'}> ${task.name} </label>
+        <label for="${task.id}" ${task.isCompleted ? '' : 'contenttable'}> ${task.name} </label>
       </div>
       <div>
         <button title="Remove the task" class="remove-btn" data-taskid="${task.id}"><i class="fa-solid fa-trash">X</i></button>
